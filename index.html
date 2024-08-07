@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images\favicon.png">
+    <link rel="stylesheet" href="css/styles-index.css" />
+    <title>User management system</title>
+</head>
+<body>
+    <div class="whole">
+        <header class="header">User management system</header>
+        <nav class="navigationbar">
+            <ul>
+                <li><a href="index.html">Users</a></li>
+                <li><a href="group.html">Groups</a></li>
+                <li><a href="roles.html">Roles</a></li>
+            </ul>
+        </nav>
+        <div class="add-user">
+            <form class="add-user-form">
+                <div class="form-title">
+                    <h3>Add User</h3>
+                </div>
+                <input type="text" id="userName" placeholder="Username" autocomplete="off" required>
+                <input type="text" id="firstName" placeholder="First name" autocomplete="off" required>
+                <input type="text" id="lastName" placeholder="Last name" autocomplete="off" required>
+                <input type="text" id="emailID" placeholder="Email id" autocomplete="off" required>
+                <button class="addButton" type="submit" title="Add the user">Add user</button>
+            </form>
+        </div>
+        <div class="user-list">
+            <div class="table-title">
+                <h3>Users List</h3>
+            </div>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Users will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

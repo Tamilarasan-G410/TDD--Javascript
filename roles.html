@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images\favicon.png">
+    <link rel="stylesheet" href="css/styles-roles.css" />
+    <title>User management system</title>
+</head>
+<body>
+    <div class="whole">
+        <header class="header">User management system</header>
+        <nav class="navigationbar">
+            <ul>
+                <li><a href="index.html">Users</a></li>
+                <li><a href="group.html">Groups</a></li>
+                <li><a href="roles.html">Roles</a></li>
+            </ul>
+        </nav>
+        <div class="role-management">
+            <h2>Role Management</h2>
+            <div class="role-form">
+                <h3>Create Role</h3>
+                <form class="createRoleForm">
+                    <label for="roleName">Role Name:</label>
+                    <input type="text" class="roleName" required><br>
+    
+                    <label for="roleDescription">Role Description:</label>
+                    <input type="text" class="roleDescription" required><br>
+    
+                    <button class="createRoleBtn" type="submit">Create Role</button>
+                </form>
+            </div>
+    
+            <div class="role-list">
+                <h3>Roles List</h3>
+                <table class="rolesTable">
+                    <thead>
+                        <tr>
+                            <th>Role Name</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Roles will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="assign-role-to-user-form">
+                <h3>Assign Roles to Users</h3>
+                <form class="assignRoleToUserForm">
+                    <label for="selectRole">Select Role:</label>
+                    <select class="selectRole" required></select><br>
+    
+                    <label for="selectRoleUsers">Select Users:</label>
+                    <select class="selectRoleUsers" multiple required></select><br>
+    
+                    <button class="assignRolesToUsersBtn" type="submit">Assign Roles to Users</button>
+                </form>
+            </div>
+    
+            <div class="assign-role-to-group-form">
+                <h3>Assign Roles to Groups</h3>
+                <form class="assignRoleToGroupForm">
+                    <label for="selectRoleForGroup">Select Role:</label>
+                    <select class="selectRoleForGroup" required></select><br>
+    
+                    <label for="selectRoleGroups">Select Groups:</label>
+                    <select class="selectRoleGroups" multiple required></select><br>
+    
+                    <button class="assignRolesToGroupsBtn" type="submit">Assign Roles to Groups</button>
+                </form>
+            </div>
+    
+            <div class="view-role-assignments">
+                <h3>View Role Assignments</h3>
+                <form class="viewRoleAssignmentsForm">
+                    <label for="selectRoleToView">Select Role:</label>
+                    <select class="selectRoleToView" required></select><br>
+                    <button class="viewAssignmentBtn" type="submit">View Assignments</button>
+                </form>
+                <table class="roleAssignmentsTable">
+                    <thead>
+                        <tr>
+                            <th>Users</th>
+                            <th>Groups</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Role assignments will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

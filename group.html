@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images\favicon.png">
+    <link rel="stylesheet" href="css/styles-group.css" />
+    <title>User management system</title>
+</head>
+<body>
+    <div class="whole">
+        <header class="header">User management system</header>
+        <nav class="navigationbar">
+            <ul>
+                <li><a href="index.html">Users</a></li>
+                <li><a href="group.html">Groups</a></li>
+                <li><a href="roles.html">Roles</a></li>
+            </ul>
+        </nav>
+        <div class="group-management">
+            <!-- <h2>Group Management</h2> -->
+            <div class="group-form">
+                <div class="group-form-title">
+                    <h3>Create Group</h3>
+                </div>
+                <form id="createGroupForm">
+                    <label for="groupName">Group Name:</label>
+                    <input type="text" id="groupName" required><br>
+                    <button class="createGroup" type="submit">Create Group</button>
+                </form>
+            </div>
+    
+            <div class="group-list">
+                <div class="group-list-title">
+                    <h3>Groups List</h3>
+                </div>
+                <table id="groupsTable">
+                    <thead>
+                        <tr>
+                            <th>Group Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Groups will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="adddelete-users-to-group-form">
+                <div class="group-adddelete-title">
+                    <h3>Add/Delete Users to Group</h3>
+                </div>
+                <form id="addUsersToGroupForm">
+                    <label for="selectGroup">Select Group:</label>
+                    <select id="selectGroup" required></select><br>
+    
+                    <label for="selectUsers">Select Users:</label>
+                    <select id="selectUsers" multiple required></select><br>
+    
+                    <button class="addGroup" type="submit">Add Users to Group</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
